@@ -56,13 +56,26 @@ Display sum of all the odd numbers from 81 to 131.
 // console.log ('Sum of odd num is:', sum)
 
 
-let num = 81;
-let sum = 1;
-while ( num <= 131){
+// let num = 81;
+// let sum = 1;
+// while ( num <= 131){
 
-   sum = sum + num;
-   num += 2;
+//    sum = sum + num;
+//    num += 2;
 
+// }
+
+// console.log('sum of even nums is :', sum);
+
+
+
+
+
+// Tell Ersa to generate a multiplication table for number 5
+
+
+let n = 5;
+let i = 1;
+while ( i <= 10){
+console.log((n * i) = (n * i));
 }
-
-console.log('sum of even nums is :', sum);
