@@ -16,3 +16,5 @@ else if (price > 2500) {
 else {
    console.log(price);
 }
+
+
