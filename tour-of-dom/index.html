@@ -7,7 +7,7 @@
    <title>Tour of DOM</title>
    <link rel="stylesheet" href="styles/styles.css">
    <style>
-      li {
+      .fruits-container li {
          color: tomato;
       }
 
@@ -17,6 +17,7 @@
 
       .important-places {
          color: blueviolet;
+         background-color: aquamarine;
       }
    </style>
 </head>
@@ -38,15 +39,15 @@
             <li>DOM de re baba</li>
          </ul>
       </section>
-      <section>
-         <h1 id="fruits-title">fruits I like</h1>
+      <section class="fruits-container">
+         <h1 id="fruits-title" class="some-class random-class blue-bg">fruits I like</h1>
          <ul>
             <li>Apple</li>
             <li>Banana</li>
             <li>Carrot</li>
          </ul>
       </section>
-      <section>
+      <section id="places-container" class="large-text">
          <h1 id="places-title">Places I like to visit</h1>
          <ul>
             <li class="important-places">Sundorban</li>
@@ -59,6 +60,7 @@
    </main>
 
    <script src="js/dom.js"></script>
+   <script src="js/styleInJs.js"></script>
    <script>
       const liCollection = document.getElementsByTagName('li');
       for (const li of liCollection) {
@@ -71,11 +73,11 @@
       }
       const fruitsTitle = document.getElementById('fruits-title');
       fruitsTitle.innerText = 'Fruits title changed by JS';
-      console.log(fruitsTitle); 
+      // console.log(fruitsTitle); 
 
       const places = document.getElementsByClassName('important-places');
       for (const place of places) {
-         console.log(place.innerText);
+         // console.log(place.innerText);
       }
 
 
