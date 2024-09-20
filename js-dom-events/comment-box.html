@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Add new comment</title>
+</head>
+
+<body>
+   <h1>Please, add your comment</h1>
+   <div id="comment-container">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat eveniet aut minus soluta numquam illo quod
+         incidunt ratione corporis alias sapiente, ea vitae aliquam. Esse quos tempora quaerat expedita consequuntur.
+      </p>
+      <p>At repellendus architecto dolores maxime voluptas nobis cumque animi in vero illum aspernatur itaque aperiam
+         dolore ratione optio nihil fuga adipisci, id ducimus quas. Exercitationem expedita molestias nemo fuga dolore.
+      </p>
+      <p>Natus corporis ipsa laboriosam corrupti asperiores reiciendis aspernatur adipisci ullam amet voluptate. Beatae
+         placeat earum voluptas error quod sunt, odio harum eaque ab ipsum. Quo quibusdam id deleniti at non!</p>
+   </div>
+   <div>
+      <textarea name="" id="new-comment" cols="60" rows="5"></textarea>
+      <br>
+      <button id="btn-post">Post</button>
+   </div>
+
+
+   <script>
+      // step-1: add event listener to the post Button 
+      document.getElementById('btn-post').addEventListener('click', function () {
+         //step-2 : get the comment inside the text area
+         const commentBox = document.getElementById('new-comment');
+         const newComment = commentBox.value;
+         //step-3: set the comment inside the comment container
+         //1. get the comment container
+         //2. create new element (p)
+         //3. set the text of the comment as innerText of the P tag
+         //4. add the p tag using appendChild
+         const commentContainer = document.getElementById('comment-container');
+         const p = document.createElement('p');
+         p.innerText = newComment;
+         commentContainer.appendChild(p);
+
+         //step-4 : clear the comment box
+         commentBox.value = ' ';
+      })
+
+
+
+
+   </script>
+</body>
+
+</html>
